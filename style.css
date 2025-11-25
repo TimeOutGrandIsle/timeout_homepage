@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-image: url("crab.jpg");
+  background-image: url("crab.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* creates a nice parallax effect */
@@ -91,4 +91,5 @@ footer {
     justify-content: center;
   }
 }
+
 
