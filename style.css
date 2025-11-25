@@ -16,8 +16,8 @@ body {
 h2 {
   color: #ffffff;
   text-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
-/*  color: #026e81;
-  margin-bottom: 10px; */
+  /* color: #026e81; */
+  /* margin-bottom: 10px; */
 }
 
 section {
@@ -96,6 +96,7 @@ footer {
     justify-content: center;
   }
 }
+
 
 
 
