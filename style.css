@@ -2,7 +2,11 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f0f8ff; /* Light tropical blue */
+  background-image: url("crab.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* creates a nice parallax effect */
+  /*background: #f0f8ff; /* Light tropical blue */
   color: #033b4a; /* Deep sea blue */
 }
 
@@ -87,3 +91,4 @@ footer {
     justify-content: center;
   }
 }
+
