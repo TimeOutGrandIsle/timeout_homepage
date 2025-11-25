@@ -2,12 +2,15 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-image: url("crab.png");
+   background-image: linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ), url("crab.png");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* creates a nice parallax effect */
+ /* background-attachment: fixed;*/ /* creates a nice parallax effect */
   /*background: #f0f8ff;*/ /* Light tropical blue */
-  color: #033b4a; /* Deep sea blue */
+ /* color: #033b4a;*/ /* Deep sea blue */
 }
 
 h2 {
@@ -91,6 +94,7 @@ footer {
     justify-content: center;
   }
 }
+
 
 
 
