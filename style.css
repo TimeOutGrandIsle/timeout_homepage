@@ -1,52 +1,89 @@
+/* Global */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f7f7f7;
-  color: #333;
-  padding: 0;
-}
-
-/* HEADER */
-header {
-  text-align: center;
-  padding: 40px 20px;
-  background: #e2f2f8;
-  border-bottom: 1px solid #ccc;
-}
-
-/* MAIN CONTENT */
-main {
-  max-width: 800px;
-  margin: 30px auto;
-  padding: 0 20px;
-}
-
-section {
-  margin-bottom: 40px;
-  text-align: center;
+  background: #f0f8ff; /* Light tropical blue */
+  color: #033b4a; /* Deep sea blue */
 }
 
 h2 {
+  color: #026e81;
   margin-bottom: 10px;
 }
 
-/* BUTTONS */
-.btn {
-  display: inline-block;
-  margin: 10px;
-  padding: 12px 20px;
-  background: #0077cc;
-  color: white;
+section {
+  padding: 30px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Header */
+.header-simple {
+  background: #7ec8e3; /* Soft ocean blue */
+  padding: 30px 20px;
+  text-align: center;
+  color: #033b4a;
+}
+
+/* Navigation */
+.top-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: #dff6ff;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.top-nav a {
   text-decoration: none;
-  border-radius: 6px;
+  color: #026e81;
   font-weight: bold;
 }
 
-/* FOOTER */
-footer {
+/* Amenities */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  background: #dff6ff;
+  margin: 6px 0;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* Booking Buttons */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-block;
   text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-  background: #e2f2f8;
-  border-top: 1px solid #ccc;
+  padding: 12px 20px;
+  background: #0284a8; /* Ocean blue */
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+/* Footer */
+footer {
+  background: #026e81;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+/* Mobile-first layout */
+@media (min-width: 700px) {
+  .buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
