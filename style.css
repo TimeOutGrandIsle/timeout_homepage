@@ -140,6 +140,20 @@ footer {
     box-shadow: 0 10px 25px rgba(0,0,0,0.35);
 }
 
+ @media (max-width: 600px) {
+    .gallery-grid img {
+        height: 140px;   /* Smaller mobile height */
+    }
+
+    #gallery {
+        padding: 40px 15px;   /* Optional: tighter spacing on mobile */
+    }
+
+    #gallery h2 {
+        font-size: 26px;      /* Slightly smaller heading on mobile */
+    }
+}
+
 #lightbox {
     position: fixed;
     inset: 0;
@@ -158,6 +172,7 @@ footer {
 }
   
 }
+
 
 
 
