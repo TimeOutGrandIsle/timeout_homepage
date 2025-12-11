@@ -45,6 +45,11 @@
 	<p style="margin-left: 40px; font-weight: bold;">Check in: 10:00 am<p>
 	<p style="margin-left: 40px; font-weight: bold;">Check out: 3:00 pm<p>
     <li>Local recommendations</li>
+	<p style="margin-left: 40px;">Groceries<p>
+	<p style="margin-left: 80px;">Sureway ~ 1/2 mile<p>
+	<p style="margin-left: 80px;">Grand Isle Supermarket ~ 3/4 mile<p>
+	<p style="margin-left: 40px;">Fresh Seafood<p>
+	<p style="margin-left: 80px;">Kim Chauvin's Seafood - 195 Cypress Lane <p>
     <li>Guest safety</li>
   </ul>
 </section>
@@ -71,8 +76,28 @@
   <p>© 2025 Time Out Grand Isle</p>
 </footer>
 
+<script>
+document.querySelectorAll(".gallery-grid img").forEach(img => {
+    img.addEventListener("click", () => {
+        openLightbox(img.src);
+    });
+});
+
+function openLightbox(src) {
+    const modal = document.createElement('div');
+    modal.id = "lightbox";
+    modal.innerHTML = `<img src="${src}" />`;
+    document.body.appendChild(modal);
+
+    modal.addEventListener("click", () => {
+        modal.remove();
+    });
+}
+</script>
+		  
 </body>
 </html>
+
 
 
 
