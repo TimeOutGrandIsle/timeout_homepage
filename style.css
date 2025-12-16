@@ -34,16 +34,26 @@ body::before {
   padding: 0.5rem; box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   position: sticky; top: 0; z-index: 10;
 }
-.top-nav a {
-  margin: 0 1rem; text-decoration: none; color: #006699;
-  font-weight: bold; padding: 0.3rem 0.6rem; border-radius: 5px;
-  transition: background 0.3s, color 0.3s;
+.top-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.25); /* translucent glass */
+  backdrop-filter: blur(8px);  /* glass blur effect */
+  -webkit-backdrop-filter: blur(8px); /* Safari support */
+  padding: 0.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-radius: 12px; /* optional rounded corners */
+  transition: background 0.3s, box-shadow 0.3s;
 }
-.top-nav a:hover { background: #006699; color: #fff; }
-section {
-  padding: 3rem 2rem; background: rgba(255, 255, 255, 0.85);
-  margin: 1rem auto; max-width: 1200px; border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+
+.top-nav a:hover {
+  background: rgba(0, 170, 255, 0.8); /* ocean blue highlight */
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 section h2 {
   font-size: 2rem; color: #ff9900; margin-bottom: 1rem;
@@ -83,3 +93,4 @@ footer {
   text-align: center; padding: 1.5rem; background: rgba(0,170,255,0.85);
   color: white; font-weight: bold; margin-top: 2rem; text-shadow: 1px 1px 2px #000;
 }
+
