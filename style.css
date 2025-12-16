@@ -1,261 +1,118 @@
-/* Global */
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.45),
-      rgba(0, 0, 0, 0.45)
-    ), url("GISign.png");
-  background-size: contain;
-  background-position: center;
-  background-attachment: fixed; /* parallax effect */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
 }
 
-h2 {
-  color: #ffffff;
-  text-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
-}
-
-section {
-  padding: 30px 20px;
-  max-width: 900px;
-  margin: auto;
-}
-
-/* Header */
 .header-simple {
-  background: #7ec8e3;
-  padding: 30px 20px;
+  background: #00aaff;
+  color: white;
   text-align: center;
-  color: #033b4a;
+  padding: 2rem;
 }
 
-/* Navigation */
 .top-nav {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  background: #dff6ff;
-  padding: 10px;
   flex-wrap: wrap;
+  background: #eee;
+  padding: 0.5rem;
 }
 
 .top-nav a {
+  margin: 0 1rem;
   text-decoration: none;
-  color: #026e81;
+  color: #333;
   font-weight: bold;
 }
 
-/* Amenities */
-ul {
-  list-style: none;
-  padding-left: 0;
+section {
+  padding: 2rem;
 }
 
-ul li {
-  background: #dff6ff;
-  margin: 6px 0;
-  padding: 10px;
-  border-radius: 6px;
-}
-
-/* Booking Buttons */
 .buttons {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .btn {
-  display: inline-block;
-  text-align: center;
-  padding: 12px 20px;
-  background: #0284a8;
+  background: #00aaff;
   color: white;
   text-decoration: none;
-  border-radius: 6px;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s;
 }
 
-/* Footer */
-footer {
-  background: #026e81;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 30px;
+.btn:hover {
+  background: #0088cc;
 }
 
-/* Desktop Layout Fix */
-@media (min-width: 700px) {
-  .buttons {
-    flex-direction: row;
-    justify-content: center;
-  }
-}
-
-/* ───────────────────────────────
-   GALLERY SECTION
-──────────────────────────────── */
-#gallery {
-  padding: 60px 20px;
-  background: rgba(255, 255, 255, 0.75);
-  border-radius: 20px;
-  margin: 50px auto;
-  max-width: 1100px;
-  backdrop-filter: blur(4px);
-}
-
-#gallery h2 {
-  text-align: center;
-  margin-bottom: 25px;
-  font-size: 32px;
-  color: #005f73;
-  letter-spacing: 1px;
-  font-weight: 700;
-}
-
-/* Responsive image grid */
+/* Gallery Grid */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
 }
 
-.gallery-grid img {
+.gallery-item img {
   width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 18px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: auto;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s;
 }
 
-.gallery-grid img:hover {
-  transform: scale(1.04);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+.gallery-item img:hover {
+  transform: scale(1.05);
 }
 
-/* Mobile Gallery Fix */
-@media (max-width: 600px) {
-  .gallery-grid img {
-    height: 140px;
-  }
-
-  #gallery {
-    padding: 40px 15px;
-  }
-
-  #gallery h2 {
-    font-size: 26px;
-  }
-}
-
-/* ───────── LIGHTBOX ───────── */
-
+/* Lightbox */
 #lightbox {
   position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.85);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  padding: 20px;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.8);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  visibility:hidden;
+  opacity:0;
+  transition: opacity 0.3s;
+  z-index:1000;
 }
 
 #lightbox.active {
-  display: flex;
+  visibility: visible;
+  opacity:1;
 }
 
 .lightbox-content {
   max-width: 90%;
   max-height: 90%;
   text-align: center;
+  transform: scale(0.7);
+  transition: transform 0.3s;
+}
+
+#lightbox.active .lightbox-content {
+  transform: scale(1);
 }
 
 .lightbox-content img {
   max-width: 100%;
   max-height: 80vh;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-  animation: zoomIn 0.35s ease;
-}
-
-/* Zoom animation */
-@keyframes zoomIn {
-  from {
-    transform: scale(0.85);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
+  border-radius: 8px;
 }
 
 .lightbox-caption {
-  margin-top: 12px;
-  color: #ffffff;
-  font-size: 15px;
-  font-weight: 600;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+  color: #fff;
+  margin-top: 0.5rem;
+  font-size: 1rem;
 }
-
-/* ───────── GALLERY CAPTIONS + POP ───────── */
-
-.gallery-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 18px;
-  cursor: pointer;
-}
-
-.gallery-item img {
-  pointer-events: none;
-}
-
-.gallery-item::after {
-  content: attr(data-caption);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-
-  padding: 10px 14px;
-  font-size: 14px;
-  font-weight: 600;
-
-  color: #ffffff;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.75),
-    rgba(0, 0, 0, 0.15)
-  );
-
-  z-index: 2;
-  box-sizing: border-box;
-}
-
-.gallery-item img {
-  display: block;
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  transition: transform 0.35s ease;
-}
-
-.gallery-item:hover img {
-  transform: scale(1.05);
-}
-
-/* Stronger pop-out effect */
-.gallery-item {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.gallery-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
-}
-
-
