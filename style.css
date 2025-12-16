@@ -150,24 +150,6 @@ footer {
   }
 }
 
-/* Lightbox */
-#lightbox {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-#lightbox img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 20px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-}
-
 /* ───────── LIGHTBOX ───────── */
 
 #lightbox {
@@ -205,3 +187,4 @@ footer {
   font-weight: 600;
   text-shadow: 0 2px 6px rgba(0,0,0,0.8);
 }
+
