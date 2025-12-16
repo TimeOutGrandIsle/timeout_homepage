@@ -167,3 +167,41 @@ footer {
   border-radius: 20px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
+
+/* ───────── LIGHTBOX ───────── */
+
+#lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+#lightbox.active {
+  display: flex;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 90%;
+  text-align: center;
+}
+
+.lightbox-content img {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+.lightbox-caption {
+  margin-top: 12px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+}
