@@ -83,16 +83,48 @@
     <h2>Time Out - Past & Present</h2>
 
     <div class="gallery-grid">
-        <img src="images/GISign.png" alt="Welcome to the Island!">
-        <img src="images/TIMEOUT.BMP" alt="Time Out circa 1990">
-        <img src="images/TimeOutKatrina.jpg" alt="post-Katrina 2005">
-        <img src="images/TimeOutKatrina2.JPG" alt="post-Katrina 2005">
-        <img src="images/crab.png" alt="Photo 5">
-        <img src="images/IdaSign.JPEG" alt="post-Ida 2021"> 
-		<img src="images/Ida1.JPEG" alt="post-Ida 2021">
-		<img src="images/TimeOutGrandIsle1.jpg" alt="New Time Out photos">
-		<img src="images/photo4.jpg" alt="New Time Out photos">
-		<img src="images/photo4.jpg" alt="New Time Out photos">
+	
+		<div class="gallery-item" data-caption="Welcome to the Island!">
+			<img src="images/GISign.png" alt="Welcome to the Island!">
+		</div>
+		
+		<div class="gallery-item" data-caption="Time OUt circa 1990">
+			<img src="images/TIMEOUT.BMP" alt="Time Out circa 1990">
+		</div>
+		
+        <div class="gallery-item" data-caption="post-Katrina 2005">
+			<img src="images/TimeOutKatrina.jpg" alt="post-Katrina 2005">
+		</div>
+		
+		<div class="gallery-item" data-caption="post-Katrina 2005">
+			<img src="images/TimeOutKatrina2.JPG" alt="post-Katrina 2005">
+		</div>
+		
+		<div class="gallery-item" data-caption="local wildlife">
+			<img src="images/crab.png" alt="Photo 5">
+		</div>
+		
+		<div class="gallery-item" data-caption="post-Ida 2021">
+			<img src="images/IdaSign.JPEG" alt="post-Ida 2021">
+		</div>
+		
+		<div class="gallery-item" data-caption="post-Ida 2021">
+			<img src="images/Ida1.JPEG" alt="post-Ida 2021">
+		</div>
+		
+        <div class="gallery-item" data-caption="Coming soon!">
+			<img src="images/TimeOutGrandIsle1.jpg" alt="New Time Out photos">
+		</div>
+		
+        <div class="gallery-item" data-caption="Time Out - Coming soon!">
+			<img src="images/photo4.jpg" alt="New Time Out - Coming soon!">
+		</div>
+		
+        <div class="gallery-item" data-caption="Time Out - Coming soon!">
+			<img src="images/photo4.jpg" alt="New Time Out - Coming soon!">
+		</div>
+		
+        
     </div>
 </section>
 		  
@@ -124,9 +156,42 @@ function openLightbox(src) {
     });
 }
 </script>
-		  
+
+<div id="lightbox">
+	<div class="lightbox content">
+		<img src="" alt="">
+		<div class="lightbox-caption"></div>div>
+	</div>div>
+</div>div>
+
+<script>
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox.querySelector('img');
+  const lightboxCaption = lightbox.querySelector('.lightbox-caption');
+
+  galleryItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const img = item.querySelector('img');
+      const caption = item.getAttribute('data-caption');
+
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightboxCaption.textContent = caption;
+
+      lightbox.classList.add('active');
+    });
+  });
+
+  lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+  });
+</script>
+
+
 </body>
 </html>
+
 
 
 
