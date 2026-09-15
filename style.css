@@ -153,8 +153,15 @@ section { width: min(1120px, calc(100% - 2rem)); margin: 0 auto; padding: 4rem 0
 .gallery-section, .guide-section { width: 100%; padding-right: max(1rem, calc((100% - 1120px) / 2)); padding-left: max(1rem, calc((100% - 1120px) / 2)); }
 .gallery-section { background: var(--sand); }
 .section-heading { max-width: 760px; }
-.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+  align-items: start;
+}
 .gallery-item {
+  align-self: start;
   overflow: hidden;
   padding: 0;
   color: var(--ink);
@@ -166,7 +173,14 @@ section { width: min(1120px, calc(100% - 2rem)); margin: 0 auto; padding: 4rem 0
   border-radius: 8px;
   box-shadow: 0 8px 24px rgba(19, 45, 58, 0.12);
 }
-.gallery-item img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; cursor: pointer; transition: transform 0.25s ease; }
+.gallery-item img {
+  width: 100%;
+  height: 240px;
+  object-fit: contain;
+  cursor: pointer;
+  background: #ece6d7;
+  transition: transform 0.25s ease;
+}
 .gallery-item span { display: block; padding: 0.8rem 0.9rem; font-size: 0.9rem; font-weight: 800; }
 .gallery-item:hover img, .gallery-item:focus-visible img { transform: scale(1.04); }
 .gallery-item:focus-visible { outline: 3px solid var(--ocean); outline-offset: 4px; }
@@ -214,6 +228,7 @@ footer { padding: 1.5rem; color: #fff; font-weight: 700; text-align: center; bac
   .quick-facts div { min-height: auto; }
   .booking-section { padding: 3rem 1rem; }
   .amenity-list { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 520px) {
   .top-nav { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; }
@@ -222,4 +237,6 @@ footer { padding: 1.5rem; color: #fff; font-weight: 700; text-align: center; bac
   .hero-copy { font-size: 1.05rem; }
   .btn { width: 100%; }
   section { padding: 3rem 0; }
+  .gallery-grid { grid-template-columns: 1fr; }
+  .gallery-item img { height: 260px; }
 }
