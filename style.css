@@ -27,7 +27,7 @@ a { color: var(--ocean-dark); }
   display: flex;
   flex-direction: column;
   color: #fff;
-  background: linear-gradient(90deg, rgba(9, 82, 95, 0.72), rgba(33, 154, 177, 0.34)), url("images/TimeOutGrandIsle1.jpg") center / cover no-repeat;
+  background: linear-gradient(90deg, rgba(9, 82, 95, 0.76), rgba(33, 154, 177, 0.32)), url("images/TimeOutGrandIsle1.webp") center / cover no-repeat;
 }
 
 .top-nav {
@@ -53,6 +53,7 @@ a { color: var(--ocean-dark); }
   border-radius: 6px;
 }
 .top-nav a:hover, .top-nav a:focus { color: #fff; background: linear-gradient(135deg, #168fb0, #7cc9d7); }
+.top-nav .nav-cta { color: #fff; background: var(--coral); }
 
 .hero-content {
   width: min(1120px, calc(100% - 2rem));
@@ -68,12 +69,25 @@ a { color: var(--ocean-dark); }
   text-transform: uppercase;
 }
 .site-hero .eyebrow { color: #ffd8bd; }
+.opening-badge {
+  display: inline-block;
+  width: fit-content;
+  margin: 0 0 1rem;
+  padding: 0.45rem 0.75rem;
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: #ffd8bd;
+  border-radius: 999px;
+}
 h1, h2, h3, p { overflow-wrap: anywhere; }
 h1 {
-  max-width: 760px;
+  max-width: 900px;
   margin: 0;
-  font-size: clamp(3rem, 8vw, 5.8rem);
-  line-height: 0.95;
+  font-size: clamp(3rem, 7vw, 5.35rem);
+  line-height: 0.98;
 }
 h2 { margin: 0; font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.05; }
 h3 { margin: 0 0 0.5rem; font-size: 1.15rem; }
@@ -140,9 +154,22 @@ section { width: min(1120px, calc(100% - 2rem)); margin: 0 auto; padding: 4rem 0
 .gallery-section { background: var(--sand); }
 .section-heading { max-width: 760px; }
 .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
-.gallery-item { overflow: hidden; background: #fff; border-radius: 8px; box-shadow: 0 8px 24px rgba(19, 45, 58, 0.12); }
+.gallery-item {
+  overflow: hidden;
+  padding: 0;
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  background: #fff;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(19, 45, 58, 0.12);
+}
 .gallery-item img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; cursor: pointer; transition: transform 0.25s ease; }
-.gallery-item img:hover, .gallery-item img:focus { transform: scale(1.04); }
+.gallery-item span { display: block; padding: 0.8rem 0.9rem; font-size: 0.9rem; font-weight: 800; }
+.gallery-item:hover img, .gallery-item:focus-visible img { transform: scale(1.04); }
+.gallery-item:focus-visible { outline: 3px solid var(--ocean); outline-offset: 4px; }
 .guide-grid { grid-template-columns: repeat(4, 1fr); }
 .guide-grid p { margin: 0.35rem 0; }
 .small-note { color: var(--muted); font-size: 0.9rem; }
@@ -191,7 +218,7 @@ footer { padding: 1.5rem; color: #fff; font-weight: 700; text-align: center; bac
 @media (max-width: 520px) {
   .top-nav { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; }
   .top-nav a { flex: 0 0 auto; font-size: 0.9rem; }
-  h1 { font-size: 3rem; }
+  h1 { font-size: clamp(2.65rem, 14vw, 3.5rem); }
   .hero-copy { font-size: 1.05rem; }
   .btn { width: 100%; }
   section { padding: 3rem 0; }

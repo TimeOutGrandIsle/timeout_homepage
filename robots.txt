@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://timeoutgrandisle.github.io/timeout_homepage/sitemap.xml

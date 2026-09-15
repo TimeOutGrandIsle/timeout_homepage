@@ -3,7 +3,59 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Time Out Grand Isle | Direct Booking</title>
+<title>Time Out Grand Isle | Beachfront Vacation Rental</title>
+<meta name="description" content="Plan a stay at Time Out, a new 4-bedroom, 3-bath beachfront vacation rental in Grand Isle, Louisiana, with Gulf views and boat-friendly parking.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0b6577">
+<link rel="canonical" href="https://timeoutgrandisle.github.io/timeout_homepage/">
+<link rel="icon" href="images/GISign.png" type="image/png">
+<link rel="preload" as="image" href="images/TimeOutGrandIsle1.webp" type="image/webp" fetchpriority="high">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Time Out Grand Isle">
+<meta property="og:title" content="Time Out Grand Isle | Beachfront Vacation Rental">
+<meta property="og:description" content="A new 4-bedroom, 3-bath beachfront Grand Isle getaway for family beach weekends and fishing trips, planned for late 2026.">
+<meta property="og:url" content="https://timeoutgrandisle.github.io/timeout_homepage/">
+<meta property="og:image" content="https://timeoutgrandisle.github.io/timeout_homepage/images/TimeOutGrandIsle1.jpg">
+<meta property="og:image:alt" content="Blueprint preview of the new Time Out beachfront home in Grand Isle, Louisiana">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Time Out Grand Isle | Beachfront Vacation Rental">
+<meta name="twitter:description" content="Follow the rebuild and plan a future beachfront stay in Grand Isle, Louisiana.">
+<meta name="twitter:image" content="https://timeoutgrandisle.github.io/timeout_homepage/images/TimeOutGrandIsle1.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VacationRental",
+  "name": "Time Out Grand Isle",
+  "url": "https://timeoutgrandisle.github.io/timeout_homepage/",
+  "description": "A new beachfront vacation home in Grand Isle, Louisiana, planned for late 2026 with four bedrooms, three full baths, Gulf views, and boat-friendly parking.",
+  "image": "https://timeoutgrandisle.github.io/timeout_homepage/images/TimeOutGrandIsle1.jpg",
+  "telephone": "+1-601-209-0231",
+  "email": "timeoutgrandisle@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Grand Isle",
+    "addressRegion": "LA",
+    "addressCountry": "US"
+  },
+  "numberOfBedrooms": 4,
+  "numberOfBathroomsTotal": 3,
+  "occupancy": {
+    "@type": "QuantitativeValue",
+    "minValue": 1,
+    "maxValue": 10
+  },
+  "amenityFeature": [
+    {"@type": "LocationFeatureSpecification", "name": "Beachfront", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Gulf views", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Boat-friendly parking", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Fast Wi-Fi", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Full kitchen", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Washer and dryer", "value": true}
+  ]
+}
+</script>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,7 +63,7 @@
 <header class="site-hero" id="top">
   <nav class="top-nav" aria-label="Main navigation">
     <a href="#about">About</a>
-    <a href="#booking">Book Direct</a>
+    <a class="nav-cta" href="#booking">Check Availability</a>
     <a href="#amenities">Amenities</a>
     <a href="#gallery">Gallery</a>
     <a href="#guide">Local Guide</a>
@@ -19,11 +71,12 @@
   </nav>
 
   <div class="hero-content">
+    <p class="opening-badge">Coming late 2026 · Inquiries open</p>
     <p class="eyebrow">Grand Isle, Louisiana</p>
     <h1>Time Out Grand Isle</h1>
     <p class="hero-copy">A new beachfront Grand Isle getaway planned for late 2026, designed around wide-open Gulf views, beach weekends, fishing trips, and easy time away with family and friends.</p>
     <div class="hero-actions">
-      <a class="btn primary" href="#booking">Plan a Direct Booking</a>
+      <a class="btn primary" href="#booking">Check Future Availability</a>
       <a class="btn secondary" href="https://calendar.google.com/calendar/embed?src=n609smo0ar7787csl3una2c054%40group.calendar.google.com&ctz=America%2FChicago" target="_blank" rel="noopener">View Calendar</a>
     </div>
   </div>
@@ -100,15 +153,19 @@
       <p>Current guest-facing photos will be added as construction progresses. For now, the gallery shares the island, the original camp, and the rebuild journey.</p>
     </div>
     <div class="gallery-grid">
-      <div class="gallery-item" data-caption="Welcome to Grand Isle"><img src="images/GISign.png" alt="Welcome to Grand Isle sign"></div>
-      <div class="gallery-item" data-caption="Time Out circa 1973"><img src="images/TimeOutLate60s.jpg" alt="Time Out circa 1973"></div>
-      <div class="gallery-item" data-caption="Time Out circa 1990"><img src="images/TIMEOUT.BMP" alt="Time Out circa 1990"></div>
-      <div class="gallery-item" data-caption="Post-Katrina 2005"><img src="images/TimeOutKatrina.jpg" alt="Time Out after Katrina in 2005"></div>
-      <div class="gallery-item" data-caption="Post-Katrina 2005"><img src="images/TimeOutKatrina2.JPG" alt="Second Time Out post-Katrina photo from 2005"></div>
-      <div class="gallery-item" data-caption="Grand Isle wildlife"><img src="images/crab.png" alt="Grand Isle crab"></div>
-      <div class="gallery-item" data-caption="Post-Ida 2021"><img src="images/IdaSign.JPEG" alt="Time Out sign after Ida in 2021"></div>
-      <div class="gallery-item" data-caption="Post-Ida 2021"><img src="images/Ida1.JPEG" alt="Time Out after Ida in 2021"></div>
-      <div class="gallery-item" data-caption="New Time Out coming late 2026"><img src="images/TimeOutGrandIsle1.jpg" alt="New Time Out Grand Isle preview"></div>
+      <button class="gallery-item" type="button" data-caption="Welcome to Grand Isle"><img src="images/GISign.webp" alt="Welcome to Grand Isle sign" width="1119" height="791" loading="lazy" decoding="async"><span>Welcome to Grand Isle</span></button>
+      <button class="gallery-item" type="button" data-caption="Time Out on the beachfront in the early 1970s"><img src="images/time-out-grand-isle-early-1970s.webp" alt="Time Out beachfront camp in Grand Isle in the early 1970s" width="1365" height="1400" loading="lazy" decoding="async"><span>Time Out · Early 1970s</span></button>
+      <button class="gallery-item" type="button" data-caption="Looking west from Time Out in the early 1970s"><img src="images/time-out-grand-isle-looking-west-early-1970s.webp" alt="View looking west from Time Out in Grand Isle in the early 1970s" width="1400" height="1172" loading="lazy" decoding="async"><span>Looking west · Early 1970s</span></button>
+      <button class="gallery-item" type="button" data-caption="The original Time Out, circa 1973"><img src="images/TimeOutLate60s.webp" alt="The original Time Out beachfront camp circa 1973" width="1171" height="1200" loading="lazy" decoding="async"><span>The original Time Out · Circa 1973</span></button>
+      <button class="gallery-item" type="button" data-caption="Time Out circa 1990"><img src="images/TIMEOUT.webp" alt="Time Out beach house in Grand Isle circa 1990" width="1200" height="810" loading="lazy" decoding="async"><span>Time Out · Circa 1990</span></button>
+      <button class="gallery-item" type="button" data-caption="Time Out after Hurricane Katrina in 2005"><img src="images/TimeOutKatrina.webp" alt="Time Out after Hurricane Katrina in 2005" width="640" height="426" loading="lazy" decoding="async"><span>After Hurricane Katrina · 2005</span></button>
+      <button class="gallery-item" type="button" data-caption="Time Out after Hurricane Katrina in 2005"><img src="images/TimeOutKatrina2.webp" alt="Second view of Time Out after Hurricane Katrina in 2005" width="640" height="480" loading="lazy" decoding="async"><span>After Hurricane Katrina · 2005</span></button>
+      <button class="gallery-item" type="button" data-caption="Time Out during cleanup after Hurricanes Gustav and Ike struck two weeks apart in 2008"><img src="images/time-out-cleanup-gustav-ike-2008.webp" alt="Time Out beach house during cleanup after Hurricanes Gustav and Ike in 2008" width="1400" height="1050" loading="lazy" decoding="async"><span>Cleanup after Gustav and Ike · 2008</span></button>
+      <button class="gallery-item" type="button" data-caption="Family cleanup at Time Out after Hurricanes Gustav and Ike in 2008"><img src="images/family-cleanup-gustav-ike-2008.webp" alt="Family members helping with cleanup at Time Out after Hurricanes Gustav and Ike in 2008" width="1400" height="1050" loading="lazy" decoding="async"><span>Family cleanup · 2008</span></button>
+      <button class="gallery-item" type="button" data-caption="A colorful Grand Isle blue crab"><img src="images/crab.webp" alt="Colorful blue crab on Grand Isle beach" width="1200" height="900" loading="lazy" decoding="async"><span>Grand Isle wildlife</span></button>
+      <button class="gallery-item" type="button" data-caption="The Time Out sign after Hurricane Ida in 2021"><img src="images/IdaSign.webp" alt="Time Out sign after Hurricane Ida in 2021" width="900" height="1200" loading="lazy" decoding="async"><span>After Hurricane Ida · 2021</span></button>
+      <button class="gallery-item" type="button" data-caption="The Time Out site after Hurricane Ida in 2021"><img src="images/Ida1.webp" alt="Time Out beachfront property after Hurricane Ida in 2021" width="900" height="1200" loading="lazy" decoding="async"><span>After Hurricane Ida · 2021</span></button>
+      <button class="gallery-item" type="button" data-caption="Blueprint for the new Time Out, planned for late 2026"><img src="images/TimeOutGrandIsle1.webp" alt="Blueprint preview of the new Time Out beachfront vacation home" width="912" height="553" loading="lazy" decoding="async"><span>The new Time Out · Coming late 2026</span></button>
     </div>
   </section>
 
