@@ -110,12 +110,63 @@
     <div class="booking-copy">
       <p class="section-kicker">Direct booking first</p>
       <h2>Start planning your future Time Out stay.</h2>
-      <p>Airbnb and VRBO listings are not active yet, so the best way to ask about future dates is to email directly. Include your preferred check-in and check-out dates, group size, and anything important about your trip.</p>
+      <p>Airbnb and VRBO listings are not active yet. Send an inquiry with your preferred dates and group details, and we will follow up directly.</p>
+      <div class="booking-links">
+        <a href="https://calendar.google.com/calendar/embed?src=n609smo0ar7787csl3una2c054%40group.calendar.google.com&ctz=America%2FChicago" target="_blank" rel="noopener">View availability calendar</a>
+        <a href="mailto:timeoutgrandisle@gmail.com">Prefer to email us?</a>
+      </div>
     </div>
-    <div class="booking-actions">
-      <a class="btn primary" href="mailto:timeoutgrandisle@gmail.com?subject=Time Out Direct Booking Inquiry&body=Please include your preferred check-in and check-out dates, group size, and any questions about your Grand Isle stay.">Email for Direct Booking</a>
-      <a class="btn secondary" href="https://calendar.google.com/calendar/embed?src=n609smo0ar7787csl3una2c054%40group.calendar.google.com&ctz=America%2FChicago" target="_blank" rel="noopener">Check Availability Calendar</a>
-    </div>
+    <form id="inquiry-form" class="inquiry-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="123eace8-ebea-4c7c-91c8-171238ebdef7">
+      <input type="hidden" name="subject" value="New Time Out Grand Isle booking inquiry">
+      <input type="hidden" name="from_name" value="Time Out Grand Isle Website">
+      <input type="checkbox" name="botcheck" class="form-honeypot" tabindex="-1" autocomplete="off">
+
+      <div class="form-grid">
+        <label class="form-field">
+          <span>Name <strong aria-hidden="true">*</strong></span>
+          <input type="text" name="name" autocomplete="name" required>
+        </label>
+        <label class="form-field">
+          <span>Email <strong aria-hidden="true">*</strong></span>
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+        <label class="form-field">
+          <span>Phone <small>(optional)</small></span>
+          <input type="tel" name="phone" autocomplete="tel">
+        </label>
+        <label class="form-field">
+          <span>Number of guests <strong aria-hidden="true">*</strong></span>
+          <input type="number" name="guests" min="1" max="10" inputmode="numeric" required>
+        </label>
+        <label class="form-field">
+          <span>Preferred check-in <strong aria-hidden="true">*</strong></span>
+          <input type="date" id="check-in" name="check_in" required>
+        </label>
+        <label class="form-field">
+          <span>Preferred check-out <strong aria-hidden="true">*</strong></span>
+          <input type="date" id="check-out" name="check_out" required>
+        </label>
+        <label class="form-field form-field-wide">
+          <span>Type of trip</span>
+          <select name="trip_type">
+            <option value="">Select one</option>
+            <option>Family beach getaway</option>
+            <option>Fishing trip</option>
+            <option>Multi-family stay</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label class="form-field form-field-wide">
+          <span>Questions or special requests</span>
+          <textarea name="message" rows="4" placeholder="Tell us anything helpful about your planned stay."></textarea>
+        </label>
+      </div>
+
+      <button class="btn primary form-submit" type="submit">Send Booking Inquiry</button>
+      <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+      <p class="form-note">Your information will only be used to respond to this inquiry.</p>
+    </form>
   </section>
 
   <section class="fit-section" aria-labelledby="perfect-for-title">
